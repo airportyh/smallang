@@ -1,6 +1,6 @@
 # Small Lang
 
-Small Lang is a small programming language which you are do build yourself
+Small Lang is a small programming language you can build yourself
 as your first programming language. It is a part of [a course for learning
 how to build a programming language using JavaScript](https://www.youtube.com/watch?v=5CS0CNVsn4I&list=PLSq9OFrD2Q3DasoOa54Vm9Mr8CATyTbLF).
 
