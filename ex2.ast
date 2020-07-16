@@ -1,0 +1,55 @@
+[
+  {
+    "type": "var_assign",
+    "var_name": {
+      "type": "identifier",
+      "value": "name",
+      "text": "name",
+      "offset": 0,
+      "lineBreaks": 0,
+      "line": 1,
+      "col": 1
+    },
+    "value": {
+      "type": "string",
+      "value": "\"Bob\"",
+      "text": "\"Bob\"",
+      "offset": 7,
+      "lineBreaks": 0,
+      "line": 1,
+      "col": 8
+    }
+  },
+  {
+    "type": "fun_call",
+    "fun_name": {
+      "type": "identifier",
+      "value": "print",
+      "text": "print",
+      "offset": 13,
+      "lineBreaks": 0,
+      "line": 2,
+      "col": 1
+    },
+    "arguments": [
+      {
+        "type": "string",
+        "value": "\"Hello\"",
+        "text": "\"Hello\"",
+        "offset": 19,
+        "lineBreaks": 0,
+        "line": 2,
+        "col": 7
+      },
+      {
+        "type": "identifier",
+        "value": "name",
+        "text": "name",
+        "offset": 27,
+        "lineBreaks": 0,
+        "line": 2,
+        "col": 15
+      }
+    ]
+  }
+]
