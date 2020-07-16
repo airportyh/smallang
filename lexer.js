@@ -16,6 +16,8 @@ let lexer = moo.compile({
   NL:      { match: /\n/, lineBreaks: true },
 });
 
+module.exports = lexer;
+
 async function main() {
     const code = (await fs.readFile("example.small")).toString();
     lexer.reset(code);
@@ -28,5 +30,3 @@ async function main() {
     }
 
 }
-
-main().catch(err => console.log(err.stack));
