@@ -88,3 +88,4 @@ If you'd like to build out this language, you may use this todo list as a guide:
     * function call
     * runtime functions
     * lambda function
+* code challenges
