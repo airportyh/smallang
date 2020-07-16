@@ -1,0 +1,6 @@
+x1 = 4
+y1 = 8
+x2 = 5
+y2 = 12
+dist = sqrt(add(pow(subtract(x1 x2) 2) pow(subtract(y1 y2) 2)))
+print("The distance is" dist)
