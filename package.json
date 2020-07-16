@@ -1,0 +1,25 @@
+{
+  "name": "smallang",
+  "version": "1.0.0",
+  "description": "Small Lang is a small programming language you can build yourself as your first programming language. It is a part of [a course for learning how to build a programming language using JavaScript](https://www.youtube.com/watch?v=5CS0CNVsn4I&list=PLSq9OFrD2Q3DasoOa54Vm9Mr8CATyTbLF).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airportyh/smallang.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/airportyh/smallang/issues"
+  },
+  "homepage": "https://github.com/airportyh/smallang#readme",
+  "dependencies": {
+    "moo": "^0.5.1",
+    "mz": "^2.7.0",
+    "nearley": "^2.19.5"
+  }
+}
