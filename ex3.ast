@@ -1,0 +1,268 @@
+[
+  {
+    "type": "var_assign",
+    "var_name": {
+      "type": "identifier",
+      "value": "x1",
+      "text": "x1",
+      "offset": 0,
+      "lineBreaks": 0,
+      "line": 1,
+      "col": 1
+    },
+    "value": {
+      "type": "number",
+      "value": "4",
+      "text": "4",
+      "offset": 5,
+      "lineBreaks": 0,
+      "line": 1,
+      "col": 6
+    }
+  },
+  {
+    "type": "var_assign",
+    "var_name": {
+      "type": "identifier",
+      "value": "y1",
+      "text": "y1",
+      "offset": 7,
+      "lineBreaks": 0,
+      "line": 2,
+      "col": 1
+    },
+    "value": {
+      "type": "number",
+      "value": "8",
+      "text": "8",
+      "offset": 12,
+      "lineBreaks": 0,
+      "line": 2,
+      "col": 6
+    }
+  },
+  {
+    "type": "var_assign",
+    "var_name": {
+      "type": "identifier",
+      "value": "x2",
+      "text": "x2",
+      "offset": 14,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 1
+    },
+    "value": {
+      "type": "number",
+      "value": "5",
+      "text": "5",
+      "offset": 19,
+      "lineBreaks": 0,
+      "line": 3,
+      "col": 6
+    }
+  },
+  {
+    "type": "var_assign",
+    "var_name": {
+      "type": "identifier",
+      "value": "y2",
+      "text": "y2",
+      "offset": 21,
+      "lineBreaks": 0,
+      "line": 4,
+      "col": 1
+    },
+    "value": {
+      "type": "number",
+      "value": "12",
+      "text": "12",
+      "offset": 26,
+      "lineBreaks": 0,
+      "line": 4,
+      "col": 6
+    }
+  },
+  {
+    "type": "var_assign",
+    "var_name": {
+      "type": "identifier",
+      "value": "dist",
+      "text": "dist",
+      "offset": 29,
+      "lineBreaks": 0,
+      "line": 5,
+      "col": 1
+    },
+    "value": {
+      "type": "fun_call",
+      "fun_name": {
+        "type": "identifier",
+        "value": "sqrt",
+        "text": "sqrt",
+        "offset": 36,
+        "lineBreaks": 0,
+        "line": 5,
+        "col": 8
+      },
+      "arguments": [
+        {
+          "type": "fun_call",
+          "fun_name": {
+            "type": "identifier",
+            "value": "add",
+            "text": "add",
+            "offset": 41,
+            "lineBreaks": 0,
+            "line": 5,
+            "col": 13
+          },
+          "arguments": [
+            {
+              "type": "fun_call",
+              "fun_name": {
+                "type": "identifier",
+                "value": "pow",
+                "text": "pow",
+                "offset": 45,
+                "lineBreaks": 0,
+                "line": 5,
+                "col": 17
+              },
+              "arguments": [
+                {
+                  "type": "fun_call",
+                  "fun_name": {
+                    "type": "identifier",
+                    "value": "subtract",
+                    "text": "subtract",
+                    "offset": 49,
+                    "lineBreaks": 0,
+                    "line": 5,
+                    "col": 21
+                  },
+                  "arguments": [
+                    {
+                      "type": "identifier",
+                      "value": "x1",
+                      "text": "x1",
+                      "offset": 58,
+                      "lineBreaks": 0,
+                      "line": 5,
+                      "col": 30
+                    },
+                    {
+                      "type": "identifier",
+                      "value": "x2",
+                      "text": "x2",
+                      "offset": 61,
+                      "lineBreaks": 0,
+                      "line": 5,
+                      "col": 33
+                    }
+                  ]
+                },
+                {
+                  "type": "number",
+                  "value": "2",
+                  "text": "2",
+                  "offset": 65,
+                  "lineBreaks": 0,
+                  "line": 5,
+                  "col": 37
+                }
+              ]
+            },
+            {
+              "type": "fun_call",
+              "fun_name": {
+                "type": "identifier",
+                "value": "pow",
+                "text": "pow",
+                "offset": 68,
+                "lineBreaks": 0,
+                "line": 5,
+                "col": 40
+              },
+              "arguments": [
+                {
+                  "type": "fun_call",
+                  "fun_name": {
+                    "type": "identifier",
+                    "value": "subtract",
+                    "text": "subtract",
+                    "offset": 72,
+                    "lineBreaks": 0,
+                    "line": 5,
+                    "col": 44
+                  },
+                  "arguments": [
+                    {
+                      "type": "identifier",
+                      "value": "y1",
+                      "text": "y1",
+                      "offset": 81,
+                      "lineBreaks": 0,
+                      "line": 5,
+                      "col": 53
+                    },
+                    {
+                      "type": "identifier",
+                      "value": "y2",
+                      "text": "y2",
+                      "offset": 84,
+                      "lineBreaks": 0,
+                      "line": 5,
+                      "col": 56
+                    }
+                  ]
+                },
+                {
+                  "type": "number",
+                  "value": "2",
+                  "text": "2",
+                  "offset": 88,
+                  "lineBreaks": 0,
+                  "line": 5,
+                  "col": 60
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "fun_call",
+    "fun_name": {
+      "type": "identifier",
+      "value": "print",
+      "text": "print",
+      "offset": 93,
+      "lineBreaks": 0,
+      "line": 6,
+      "col": 1
+    },
+    "arguments": [
+      {
+        "type": "string",
+        "value": "\"The distance is\"",
+        "text": "\"The distance is\"",
+        "offset": 99,
+        "lineBreaks": 0,
+        "line": 6,
+        "col": 7
+      },
+      {
+        "type": "identifier",
+        "value": "dist",
+        "text": "dist",
+        "offset": 117,
+        "lineBreaks": 0,
+        "line": 6,
+        "col": 25
+      }
+    ]
+  }
+]
