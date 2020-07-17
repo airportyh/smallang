@@ -98,8 +98,8 @@
           "type": "fun_call",
           "fun_name": {
             "type": "identifier",
-            "value": "multiple",
-            "text": "multiple",
+            "value": "multiply",
+            "text": "multiply",
             "offset": 61,
             "lineBreaks": 0,
             "line": 4,
@@ -151,5 +151,37 @@
         }
       ]
     }
+  },
+  {
+    "type": "fun_call",
+    "fun_name": {
+      "type": "identifier",
+      "value": "print",
+      "text": "print",
+      "offset": 88,
+      "lineBreaks": 0,
+      "line": 5,
+      "col": 1
+    },
+    "arguments": [
+      {
+        "type": "string",
+        "value": "\"The sum is\"",
+        "text": "\"The sum is\"",
+        "offset": 94,
+        "lineBreaks": 0,
+        "line": 5,
+        "col": 7
+      },
+      {
+        "type": "identifier",
+        "value": "sum",
+        "text": "sum",
+        "offset": 107,
+        "lineBreaks": 0,
+        "line": 5,
+        "col": 20
+      }
+    ]
   }
 ]

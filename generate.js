@@ -8,8 +8,9 @@ async function main() {
     }
     
     const astJson = (await fs.readFile(filename)).toString();
+    const runtimeJs = (await fs.readFile("runtime.js")).toString();
     const statements = JSON.parse(astJson);
-    const jsCode = generateJsForStatements(statements);
+    const jsCode = generateJsForStatements(statements) + "\n" + runtimeJs;
     const outputFilename = filename.replace(".ast", ".js");
     await fs.writeFile(outputFilename, jsCode);
     console.log(`Wrote ${outputFilename}.`);
@@ -39,6 +40,8 @@ function generateJsForStatementOrExpr(node) {
     } else if (node.type === "string") {
         return node.value;
     } else if (node.type === "number") {
+        return node.value;
+    } else if (node.type === "identifier") {
         return node.value;
     } else {
         throw new Error(`Unhandled AST node type ${node.type}`);

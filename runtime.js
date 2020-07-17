@@ -1,8 +1,3 @@
-var name = "Jacki";
-var age = 4;
-var favorite_color = "Yellow";
-var sum = add(1, multiply(2, subtract(4, 3)));
-print("The sum is", sum)
 function print(...args) {
     console.log(...args);
 }
