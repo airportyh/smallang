@@ -82,10 +82,12 @@ If you'd like to build out this language, you may use this todo list as a guide:
     * function call
     * multiple lines
     * lambda function
+    * comments
 * generator
     * make a generate.js that creates .js files
     * variable assignment
     * function call
     * runtime functions
     * lambda function
+    * comments
 * code challenges
