@@ -5,16 +5,16 @@ const myLexer = require("./lexer");
 @lexer myLexer
 
 statements
-    -> statement
+    -> _ statement _
         {% 
             (data) => {
-                return [data[0]];
+                return [data[1]];
             }
         %}
-    |  statements %NL statement
+    |  statements %NL _ statement _
         {%
             (data) => {
-                return [...data[0], data[2]];
+                return [...data[0], data[3]];
             }
         %}
 
@@ -65,6 +65,56 @@ expr
     |  %number     {% id %}
     |  %identifier {% id %}
     |  fun_call    {% id %}
+    |  lambda      {% id %}
+
+lambda -> "(" _ (param_list _):? ")" _ "=>" _ lambda_body
+    {%
+        (data) => {
+            return {
+                type: "lambda",
+                parameters: data[2] ? data[2][0] : [],
+                body: data[7]
+            }
+        }
+    %}
+    
+#param_list
+#    -> %identifer (__ %identifier):*
+#        {%
+#            (data) => {
+#                const repeatedPieces = data[1];
+#                const restParams = repeatedPieces.map(piece => piece[1]);
+#                return [data[0], ...restParams];
+#            }
+#        %}
+        
+param_list
+    -> %identifier
+        {%
+            (data) => {
+                return [data[0]];
+            }
+        %}
+    |  param_list __ %identifier
+        {%
+            (data) => {
+                return [...data[0], data[2]];
+            }
+        %}
+
+lambda_body
+    -> expr
+        {%
+            (data) => {
+                return [data[0]];
+            }
+        %}
+    |  "{" _ %NL statements %NL _ "}"
+        {%
+            (data) => {
+                return data[3];
+            }
+        %}
 
 # Optional whitespace    
 _ -> %WS:*
