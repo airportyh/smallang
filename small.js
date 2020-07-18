@@ -67,14 +67,14 @@ var grammar = {
             }
         }
             },
-    {"name": "param_list", "symbols": [(myLexer.has("identifier") ? {type: "identifier"} : identifier)], "postprocess": 
+    {"name": "param_list$ebnf$1", "symbols": []},
+    {"name": "param_list$ebnf$1$subexpression$1", "symbols": ["__", (myLexer.has("identifier") ? {type: "identifier"} : identifier)]},
+    {"name": "param_list$ebnf$1", "symbols": ["param_list$ebnf$1", "param_list$ebnf$1$subexpression$1"], "postprocess": function arrpush(d) {return d[0].concat([d[1]]);}},
+    {"name": "param_list", "symbols": [(myLexer.has("identifier") ? {type: "identifier"} : identifier), "param_list$ebnf$1"], "postprocess": 
         (data) => {
-            return [data[0]];
-        }
-                },
-    {"name": "param_list", "symbols": ["param_list", "__", (myLexer.has("identifier") ? {type: "identifier"} : identifier)], "postprocess": 
-        (data) => {
-            return [...data[0], data[2]];
+            const repeatedPieces = data[1];
+            const restParams = repeatedPieces.map(piece => piece[1]);
+            return [data[0], ...restParams];
         }
                 },
     {"name": "lambda_body", "symbols": ["expr"], "postprocess": 

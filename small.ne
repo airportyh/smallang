@@ -78,27 +78,13 @@ lambda -> "(" _ (param_list _):? ")" _ "=>" _ lambda_body
         }
     %}
     
-#param_list
-#    -> %identifer (__ %identifier):*
-#        {%
-#            (data) => {
-#                const repeatedPieces = data[1];
-#                const restParams = repeatedPieces.map(piece => piece[1]);
-#                return [data[0], ...restParams];
-#            }
-#        %}
-        
 param_list
-    -> %identifier
+    -> %identifier (__ %identifier):*
         {%
             (data) => {
-                return [data[0]];
-            }
-        %}
-    |  param_list __ %identifier
-        {%
-            (data) => {
-                return [...data[0], data[2]];
+                const repeatedPieces = data[1];
+                const restParams = repeatedPieces.map(piece => piece[1]);
+                return [data[0], ...restParams];
             }
         %}
 
