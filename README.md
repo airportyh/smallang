@@ -98,3 +98,13 @@ print(fib(9))
     * lambda function
     * comments
 * code challenges
+
+## My Other Stuff on Programming Languages
+
+* Checkout my full video series on [How to Make a Programming Language](https://www.youtube.com/playlist?list=PLSq9OFrD2Q3DasoOa54Vm9Mr8CATyTbLF)
+* [Live Code a Programming Language Series](https://github.com/airportyh/x-lang)
+* A few other programming languages:
+    * [Fun Lang](https://github.com/airportyh/fun-lang)
+    * [Play Lang](https://github.com/airportyh/play-lang)
+    * [Chameleon Lang)(https://github.com/airportyh/chameleon-lang)
+* [LLVM Tutorial Walkthrough](https://www.youtube.com/playlist?list=PLSq9OFrD2Q3ChEc_ejnBcO5u9JeT0ufkg)
