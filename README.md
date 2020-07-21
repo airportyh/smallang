@@ -64,12 +64,12 @@ print(fib(9))
 
 ## Video Episodes
 
-* [Episode 1: The Lexer](http://tobyho.com/video/Make-Your-Own-Language-1-The-Lexer.html)
-* [Episode 2: The Parser](http://tobyho.com/video/Make-Your-Own-Language-2-The-Parser.html)
-* [Episode 3: Parsing Function Calls](http://tobyho.com/video/Make-Your-Own-Language-3-Parsing-Function-Calls.html)
-* [Episode 4: The Generator](http://tobyho.com/video/Make-Your-Own-Language-4-The-Generator.html)
-* [Episode 5: Runtime Functions](http://tobyho.com/video/Make-Your-Own-Language-5-Runtime-Functions.html)
-* [Episode 6: Parsing Lambda Functions](http://tobyho.com/video/Make-Your-Own-Language-6-Parsing-Lambda-Functions.html)
+* [Episode 1: The Lexer](http://tobyho.com/video/Make-Your-Own-Language-1-The-Lexer.html) - ([code branch 01-lexer](https://github.com/airportyh/smallang/tree/01-lexer))
+* [Episode 2: The Parser](http://tobyho.com/video/Make-Your-Own-Language-2-The-Parser.html) - ([code branch 02-parse-script-and-var-assign](https://github.com/airportyh/smallang/tree/02-parse-script-and-var-assign))
+* [Episode 3: Parsing Function Calls](http://tobyho.com/video/Make-Your-Own-Language-3-Parsing-Function-Calls.html) - ([code branch 03-fun-call-and-multi-line](https://github.com/airportyh/smallang/tree/03-fun-call-and-multi-line))
+* [Episode 4: The Generator](http://tobyho.com/video/Make-Your-Own-Language-4-The-Generator.html) - ([code branch 04-generator](https://github.com/airportyh/smallang/tree/04-generator))
+* [Episode 5: Runtime Functions](http://tobyho.com/video/Make-Your-Own-Language-5-Runtime-Functions.html) - ([code branch 05-runtime-functions](https://github.com/airportyh/smallang/tree/05-runtime-functions))
+* [Episode 6: Parsing Lambda Functions](http://tobyho.com/video/Make-Your-Own-Language-6-Parsing-Lambda-Functions.html) - ([code branch 06-lambda-function](https://github.com/airportyh/smallang/tree/06-lambda-function))
 
 ## Todo List
 
