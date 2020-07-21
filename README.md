@@ -106,5 +106,5 @@ print(fib(9))
 * A few other programming languages:
     * [Fun Lang](https://github.com/airportyh/fun-lang)
     * [Play Lang](https://github.com/airportyh/play-lang)
-    * [Chameleon Lang)(https://github.com/airportyh/chameleon-lang)
+    * [Chameleon Lang](https://github.com/airportyh/chameleon-lang)
 * [LLVM Tutorial Walkthrough](https://www.youtube.com/playlist?list=PLSq9OFrD2Q3ChEc_ejnBcO5u9JeT0ufkg)
