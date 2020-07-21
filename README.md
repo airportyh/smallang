@@ -62,9 +62,16 @@ fib = (n) =>
 print(fib(9))
 ```
 
-## Todo List
+## Video Episodes
 
-If you'd like to build out this language, you may use this todo list as a guide:
+* [Episode 1: The Lexer](http://tobyho.com/video/Make-Your-Own-Language-1-The-Lexer.html)
+* [Episode 2: The Parser](http://tobyho.com/video/Make-Your-Own-Language-2-The-Parser.html)
+* [Episode 3: Parsing Function Calls](http://tobyho.com/video/Make-Your-Own-Language-3-Parsing-Function-Calls.html)
+* [Episode 4: The Generator](http://tobyho.com/video/Make-Your-Own-Language-4-The-Generator.html)
+* [Episode 5: Runtime Functions](http://tobyho.com/video/Make-Your-Own-Language-5-Runtime-Functions.html)
+* [Episode 6: Parsing Lambda Functions](http://tobyho.com/video/Make-Your-Own-Language-6-Parsing-Lambda-Functions.html)
+
+## Todo List
 
 * parser
     * define moo lexer
