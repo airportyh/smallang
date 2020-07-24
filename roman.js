@@ -1,35 +1,67 @@
-var toRoman = function (number) {
-    return $if(eq(number, 1), function () {
-        return "I"
+var convert_number_to_roman = function (number) {
+    return convert_number_to_roman_helper(number, 1)
+};
+var convert_number_to_roman_helper = function (number, place) {
+    return $if(eq(number, 0), function () {
+        return ""
     }, function () {
-        return $if(eq(number, 2), function () {
-            return "II"
+        var digit = modulus(number, 10);;
+        var right_part = convert_digit_to_roman(digit, place);;
+        var remaining = floor(divide(number, 10));;
+        var left_part = convert_number_to_roman_helper(remaining, add(place, 1));;
+        return concat(left_part, right_part)
+    })
+};
+
+
+
+
+var convert_digit_to_roman = function (digit, place) {
+    return $if(eq(digit, 0), function () {
+        return ""
+    }, function () {
+        return $if(or(eq(digit, 1), or(eq(digit, 2), eq(digit, 3))), function () {
+            return repeat(one(place), digit)
         }, function () {
-            return $if(eq(number, 3), function () {
-                return "III"
+            return $if(eq(digit, 4), function () {
+                return concat(one(place), five(place))
             }, function () {
-                return $if(eq(number, 4), function () {
-                    return "IV"
+                return $if(eq(digit, 5), function () {
+                    return five(place)
                 }, function () {
-                    return $if(eq(number, 5), function () {
-                        return "V"
+                    return $if(or(eq(digit, 6), or(eq(digit, 7), eq(digit, 8))), function () {
+                        return concat(five(place), repeat(one(place), subtract(digit, 5)))
                     }, function () {
-                        return concat("V", toRoman(subtract(number, 5)))
+                        return $if(eq(digit, 9), function () {
+                            return concat(one(place), one(add(place, 1)))
+                        }, function () {
+                            return concat("!", "!")
+                        })
                     })
                 })
             })
         })
     })
 };
-print("1 >", toRoman(1))
-print("2 >", toRoman(2))
-print("3 >", toRoman(3))
-print("4 >", toRoman(4))
-print("5 >", toRoman(5))
-print("6 >", toRoman(6))
-print("7 >", toRoman(7))
-print("8 >", toRoman(8))
-print("9 >", toRoman(9))
+var one = function (place) {
+    return at("IXCMↂ", subtract(place, 1))
+};
+var five = function (place) {
+    return at("VLDↁ", subtract(place, 1))
+};
+
+
+
+
+
+
+
+
+
+each(range(1, 10001), function (number) {
+    var roman = convert_number_to_roman(number);;
+    return print(concat(number, concat(" = ", roman)))
+})
 function print(...args) {
     console.log(...args);
 }
@@ -54,12 +86,20 @@ function divide(x, y) {
     return x / y;
 }
 
+function modulus(x, y) {
+    return x % y;
+}
+
 function sqrt(x) {
     return Math.sqrt(x);
 }
 
 function pow(x, y) {
     return Math.pow(x, y);
+}
+
+function floor(x) {
+    return Math.floor(x);
 }
 
 function eq(x, y) {
@@ -72,4 +112,32 @@ function $if(cond, consequent, alternate) {
     } else {
         return alternate();
     }
+}
+
+function or(cond1, cond2) {
+    return cond1 || cond2;
+}
+
+function at(arrayLike, index) {
+    return arrayLike[index];
+}
+
+function repeat(string, times) {
+    let result = "";
+    for (let i = 0; i < times; i++) {
+        result += string;
+    }
+    return result;
+}
+
+function range(start, end) {
+    const result = [];
+    for (let i = start; i < end; i++) {
+        result.push(i);
+    }
+    return result;
+}
+
+function each(arr, fun) {
+    arr.forEach(fun);
 }

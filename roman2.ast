@@ -1,0 +1,212 @@
+[
+  {
+    "type": "var_assign",
+    "var_name": {
+      "type": "identifier",
+      "value": "convert_digit_to_roman",
+      "text": "convert_digit_to_roman",
+      "offset": 0,
+      "lineBreaks": 0,
+      "line": 1,
+      "col": 1
+    },
+    "value": {
+      "type": "lambda",
+      "parameters": [
+        {
+          "type": "identifier",
+          "value": "digit",
+          "text": "digit",
+          "offset": 26,
+          "lineBreaks": 0,
+          "line": 1,
+          "col": 27
+        },
+        {
+          "type": "identifier",
+          "value": "place",
+          "text": "place",
+          "offset": 32,
+          "lineBreaks": 0,
+          "line": 1,
+          "col": 33
+        }
+      ],
+      "body": [
+        {
+          "type": "fun_call",
+          "fun_name": {
+            "type": "identifier",
+            "value": "if",
+            "text": "if",
+            "offset": 48,
+            "lineBreaks": 0,
+            "line": 2,
+            "col": 5
+          },
+          "arguments": [
+            {
+              "type": "fun_call",
+              "fun_name": {
+                "type": "identifier",
+                "value": "eq",
+                "text": "eq",
+                "offset": 52,
+                "lineBreaks": 0,
+                "line": 2,
+                "col": 9
+              },
+              "arguments": [
+                {
+                  "type": "identifier",
+                  "value": "digit",
+                  "text": "digit",
+                  "offset": 55,
+                  "lineBreaks": 0,
+                  "line": 2,
+                  "col": 12
+                },
+                {
+                  "type": "number",
+                  "value": "9",
+                  "text": "9",
+                  "offset": 61,
+                  "lineBreaks": 0,
+                  "line": 2,
+                  "col": 18
+                }
+              ]
+            },
+            {
+              "type": "lambda",
+              "parameters": [],
+              "body": [
+                {
+                  "type": "fun_call",
+                  "fun_name": {
+                    "type": "identifier",
+                    "value": "concat",
+                    "text": "concat",
+                    "offset": 78,
+                    "lineBreaks": 0,
+                    "line": 3,
+                    "col": 15
+                  },
+                  "arguments": [
+                    {
+                      "type": "fun_call",
+                      "fun_name": {
+                        "type": "identifier",
+                        "value": "one",
+                        "text": "one",
+                        "offset": 85,
+                        "lineBreaks": 0,
+                        "line": 3,
+                        "col": 22
+                      },
+                      "arguments": [
+                        {
+                          "type": "identifier",
+                          "value": "place",
+                          "text": "place",
+                          "offset": 89,
+                          "lineBreaks": 0,
+                          "line": 3,
+                          "col": 26
+                        }
+                      ]
+                    },
+                    {
+                      "type": "fun_call",
+                      "fun_name": {
+                        "type": "identifier",
+                        "value": "one",
+                        "text": "one",
+                        "offset": 96,
+                        "lineBreaks": 0,
+                        "line": 3,
+                        "col": 33
+                      },
+                      "arguments": [
+                        {
+                          "type": "fun_call",
+                          "fun_name": {
+                            "type": "identifier",
+                            "value": "add",
+                            "text": "add",
+                            "offset": 100,
+                            "lineBreaks": 0,
+                            "line": 3,
+                            "col": 37
+                          },
+                          "arguments": [
+                            {
+                              "type": "identifier",
+                              "value": "place",
+                              "text": "place",
+                              "offset": 104,
+                              "lineBreaks": 0,
+                              "line": 3,
+                              "col": 41
+                            },
+                            {
+                              "type": "number",
+                              "value": "1",
+                              "text": "1",
+                              "offset": 110,
+                              "lineBreaks": 0,
+                              "line": 3,
+                              "col": 47
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "lambda",
+              "parameters": [],
+              "body": [
+                {
+                  "type": "fun_call",
+                  "fun_name": {
+                    "type": "identifier",
+                    "value": "concat",
+                    "text": "concat",
+                    "offset": 129,
+                    "lineBreaks": 0,
+                    "line": 4,
+                    "col": 15
+                  },
+                  "arguments": [
+                    {
+                      "type": "string",
+                      "value": "\"!\"",
+                      "text": "\"!\"",
+                      "offset": 136,
+                      "lineBreaks": 0,
+                      "line": 4,
+                      "col": 22
+                    },
+                    {
+                      "type": "string",
+                      "value": "\"!\"",
+                      "text": "\"!\"",
+                      "offset": 140,
+                      "lineBreaks": 0,
+                      "line": 4,
+                      "col": 26
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

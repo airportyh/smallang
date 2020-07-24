@@ -1,0 +1,6 @@
+convert_digit_to_roman = (digit place) => {
+    if (eq(digit 9)
+        () => concat(one(place) one(add(place 1)))
+        () => concat("!" "!")
+    )
+}
