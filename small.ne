@@ -5,22 +5,19 @@ const myLexer = require("./lexer");
 @lexer myLexer
 
 statements
-    -> _ statement _
-        {% 
-            (data) => {
-                return [data[1]];
-            }
-        %}
-    |  statements %NL _ statement _
+    ->  _ml statement (__lb_ statement):* _ml
         {%
             (data) => {
-                return [...data[0], data[3]];
+                const repeated = data[2];
+                const restStatements = repeated.map(chunks => chunks[1]);
+                return [data[1], ...restStatements];
             }
         %}
 
 statement
     -> var_assign  {% id %}
     |  fun_call    {% id %}
+    |  %comment    {% id %}
 
 var_assign
     -> %identifier _ "=" _ expr
@@ -35,7 +32,7 @@ var_assign
         %}
 
 fun_call
-    -> %identifier _ "(" _ (arg_list _):? ")"
+    -> %identifier _ "(" _ml (arg_list _ml):? ")"
         {%
             (data) => {
                 return {
@@ -53,7 +50,7 @@ arg_list
                 return [data[0]];
             }
         %}
-    |  arg_list __ expr
+    |  arg_list __ml expr
         {%
             (data) => {
                 return [...data[0], data[2]];
@@ -67,7 +64,7 @@ expr
     |  fun_call    {% id %}
     |  lambda      {% id %}
 
-lambda -> "(" _ (param_list _):? ")" _ "=>" _ lambda_body
+lambda -> "(" _ (param_list _):? ")" _ "=>" _ml lambda_body
     {%
         (data) => {
             return {
@@ -95,12 +92,21 @@ lambda_body
                 return [data[0]];
             }
         %}
-    |  "{" _ %NL statements %NL _ "}"
+    |  "{" __lb_ statements __lb_ "}"
         {%
             (data) => {
-                return data[3];
+                return data[2];
             }
         %}
+
+# Mandatory line-break with optional whitespace around it
+__lb_ -> (_ %NL):+ _
+
+# Optional multi-line whitespace
+_ml -> (%WS | %NL):*
+
+# Mandatory multi-line whitespace
+__ml -> (%WS | %NL):+
 
 # Optional whitespace    
 _ -> %WS:*
