@@ -1,3 +1,16 @@
+var fib = function (n) {
+    return $if(eq(n, 1), function () {
+        return 1
+    }, function () {
+        return $if(eq(n, 2), function () {
+            return 1
+        }, function () {
+            return add(fib(subtract(n, 1)), fib(subtract(n, 2)))
+        })
+    })
+};
+var result = fib(7);
+print("The answer is", result)
 function print(...args) {
     console.log(...args);
 }

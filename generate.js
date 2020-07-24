@@ -32,7 +32,10 @@ function generateJsForStatementOrExpr(node) {
         const js = `var ${varName} = ${jsExpr};`;
         return js;
     } else if (node.type === "fun_call") {
-        const funName = node.fun_name.value;
+        let funName = node.fun_name.value;
+        if (funName === "if") {
+            funName = "$if";
+        }
         const argList = node.arguments.map((arg) => {
             return generateJsForStatementOrExpr(arg);
         }).join(", ");
@@ -43,9 +46,28 @@ function generateJsForStatementOrExpr(node) {
         return node.value;
     } else if (node.type === "identifier") {
         return node.value;
+    } else if (node.type === "lambda") {
+        const paramList = node.parameters
+            .map(param => param.value)
+            .join(", ");
+        const jsBody = node.body.map((arg, i) => {
+            const jsCode = generateJsForStatementOrExpr(arg);
+            if (i === node.body.length - 1) {
+                return "return " + jsCode;
+            } else {
+                return jsCode;
+            }
+        }).join(";\n");
+        return `function (${paramList}) {\n${indent(jsBody)}\n}`;
+    } else if (node.type === "comment") {
+        return "";
     } else {
-        throw new Error(`Unhandled AST node type ${node.type}`);
+        throw new Error(`Unhandled AST node type ${node.type}: ${JSON.stringify(node)}`);
     }
+}
+
+function indent(string) {
+    return string.split("\n").map(line => "    " + line).join("\n");
 }
 
 main().catch(err => console.log(err.stack));

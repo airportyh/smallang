@@ -1,0 +1,355 @@
+[
+  {
+    "type": "comment",
+    "value": "// This is our fib function:",
+    "text": "// This is our fib function:",
+    "offset": 0,
+    "lineBreaks": 0,
+    "line": 1,
+    "col": 1
+  },
+  {
+    "type": "var_assign",
+    "var_name": {
+      "type": "identifier",
+      "value": "fib",
+      "text": "fib",
+      "offset": 29,
+      "lineBreaks": 0,
+      "line": 2,
+      "col": 1
+    },
+    "value": {
+      "type": "lambda",
+      "parameters": [
+        {
+          "type": "identifier",
+          "value": "n",
+          "text": "n",
+          "offset": 36,
+          "lineBreaks": 0,
+          "line": 2,
+          "col": 8
+        }
+      ],
+      "body": [
+        {
+          "type": "fun_call",
+          "fun_name": {
+            "type": "identifier",
+            "value": "if",
+            "text": "if",
+            "offset": 46,
+            "lineBreaks": 0,
+            "line": 3,
+            "col": 5
+          },
+          "arguments": [
+            {
+              "type": "fun_call",
+              "fun_name": {
+                "type": "identifier",
+                "value": "eq",
+                "text": "eq",
+                "offset": 49,
+                "lineBreaks": 0,
+                "line": 3,
+                "col": 8
+              },
+              "arguments": [
+                {
+                  "type": "identifier",
+                  "value": "n",
+                  "text": "n",
+                  "offset": 52,
+                  "lineBreaks": 0,
+                  "line": 3,
+                  "col": 11
+                },
+                {
+                  "type": "number",
+                  "value": "1",
+                  "text": "1",
+                  "offset": 54,
+                  "lineBreaks": 0,
+                  "line": 3,
+                  "col": 13
+                }
+              ]
+            },
+            {
+              "type": "lambda",
+              "parameters": [],
+              "body": [
+                {
+                  "type": "number",
+                  "value": "1",
+                  "text": "1",
+                  "offset": 71,
+                  "lineBreaks": 0,
+                  "line": 4,
+                  "col": 15
+                }
+              ]
+            },
+            {
+              "type": "lambda",
+              "parameters": [],
+              "body": [
+                {
+                  "type": "fun_call",
+                  "fun_name": {
+                    "type": "identifier",
+                    "value": "if",
+                    "text": "if",
+                    "offset": 99,
+                    "lineBreaks": 0,
+                    "line": 6,
+                    "col": 13
+                  },
+                  "arguments": [
+                    {
+                      "type": "fun_call",
+                      "fun_name": {
+                        "type": "identifier",
+                        "value": "eq",
+                        "text": "eq",
+                        "offset": 102,
+                        "lineBreaks": 0,
+                        "line": 6,
+                        "col": 16
+                      },
+                      "arguments": [
+                        {
+                          "type": "identifier",
+                          "value": "n",
+                          "text": "n",
+                          "offset": 105,
+                          "lineBreaks": 0,
+                          "line": 6,
+                          "col": 19
+                        },
+                        {
+                          "type": "number",
+                          "value": "2",
+                          "text": "2",
+                          "offset": 107,
+                          "lineBreaks": 0,
+                          "line": 6,
+                          "col": 21
+                        }
+                      ]
+                    },
+                    {
+                      "type": "lambda",
+                      "parameters": [],
+                      "body": [
+                        {
+                          "type": "number",
+                          "value": "1",
+                          "text": "1",
+                          "offset": 132,
+                          "lineBreaks": 0,
+                          "line": 7,
+                          "col": 23
+                        }
+                      ]
+                    },
+                    {
+                      "type": "lambda",
+                      "parameters": [],
+                      "body": [
+                        {
+                          "type": "fun_call",
+                          "fun_name": {
+                            "type": "identifier",
+                            "value": "add",
+                            "text": "add",
+                            "offset": 176,
+                            "lineBreaks": 0,
+                            "line": 9,
+                            "col": 21
+                          },
+                          "arguments": [
+                            {
+                              "type": "fun_call",
+                              "fun_name": {
+                                "type": "identifier",
+                                "value": "fib",
+                                "text": "fib",
+                                "offset": 205,
+                                "lineBreaks": 0,
+                                "line": 10,
+                                "col": 25
+                              },
+                              "arguments": [
+                                {
+                                  "type": "fun_call",
+                                  "fun_name": {
+                                    "type": "identifier",
+                                    "value": "subtract",
+                                    "text": "subtract",
+                                    "offset": 209,
+                                    "lineBreaks": 0,
+                                    "line": 10,
+                                    "col": 29
+                                  },
+                                  "arguments": [
+                                    {
+                                      "type": "identifier",
+                                      "value": "n",
+                                      "text": "n",
+                                      "offset": 218,
+                                      "lineBreaks": 0,
+                                      "line": 10,
+                                      "col": 38
+                                    },
+                                    {
+                                      "type": "number",
+                                      "value": "1",
+                                      "text": "1",
+                                      "offset": 220,
+                                      "lineBreaks": 0,
+                                      "line": 10,
+                                      "col": 40
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "fun_call",
+                              "fun_name": {
+                                "type": "identifier",
+                                "value": "fib",
+                                "text": "fib",
+                                "offset": 248,
+                                "lineBreaks": 0,
+                                "line": 11,
+                                "col": 25
+                              },
+                              "arguments": [
+                                {
+                                  "type": "fun_call",
+                                  "fun_name": {
+                                    "type": "identifier",
+                                    "value": "subtract",
+                                    "text": "subtract",
+                                    "offset": 252,
+                                    "lineBreaks": 0,
+                                    "line": 11,
+                                    "col": 29
+                                  },
+                                  "arguments": [
+                                    {
+                                      "type": "identifier",
+                                      "value": "n",
+                                      "text": "n",
+                                      "offset": 261,
+                                      "lineBreaks": 0,
+                                      "line": 11,
+                                      "col": 38
+                                    },
+                                    {
+                                      "type": "number",
+                                      "value": "2",
+                                      "text": "2",
+                                      "offset": 263,
+                                      "lineBreaks": 0,
+                                      "line": 11,
+                                      "col": 40
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "var_assign",
+    "var_name": {
+      "type": "identifier",
+      "value": "result",
+      "text": "result",
+      "offset": 322,
+      "lineBreaks": 0,
+      "line": 16,
+      "col": 1
+    },
+    "value": {
+      "type": "fun_call",
+      "fun_name": {
+        "type": "identifier",
+        "value": "fib",
+        "text": "fib",
+        "offset": 331,
+        "lineBreaks": 0,
+        "line": 16,
+        "col": 10
+      },
+      "arguments": [
+        {
+          "type": "number",
+          "value": "7",
+          "text": "7",
+          "offset": 335,
+          "lineBreaks": 0,
+          "line": 16,
+          "col": 14
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment",
+    "value": "// Print them out!!",
+    "text": "// Print them out!!",
+    "offset": 339,
+    "lineBreaks": 0,
+    "line": 18,
+    "col": 1
+  },
+  {
+    "type": "fun_call",
+    "fun_name": {
+      "type": "identifier",
+      "value": "print",
+      "text": "print",
+      "offset": 359,
+      "lineBreaks": 0,
+      "line": 19,
+      "col": 1
+    },
+    "arguments": [
+      {
+        "type": "string",
+        "value": "\"The answer is\"",
+        "text": "\"The answer is\"",
+        "offset": 365,
+        "lineBreaks": 0,
+        "line": 19,
+        "col": 7
+      },
+      {
+        "type": "identifier",
+        "value": "result",
+        "text": "result",
+        "offset": 381,
+        "lineBreaks": 0,
+        "line": 19,
+        "col": 23
+      }
+    ]
+  }
+]

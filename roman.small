@@ -1,0 +1,33 @@
+toRoman = (number) => {
+    if(eq(number 1)
+        () => "I"
+        () =>
+            if(eq(number 2)
+                () => "II"
+                () =>
+                    if (eq(number 3)
+                        () => "III"
+                        () => 
+                            if (eq(number 4)
+                                () => "IV"
+                                () =>
+                                    if(eq(number 5)
+                                        () => "V"
+                                        () =>
+                                            concat("V" toRoman(subtract(number 5)))
+                                    )
+                            )
+                    )
+            )
+    )
+}
+
+print("1 >" toRoman(1))
+print("2 >" toRoman(2))
+print("3 >" toRoman(3))
+print("4 >" toRoman(4))
+print("5 >" toRoman(5))
+print("6 >" toRoman(6))
+print("7 >" toRoman(7))
+print("8 >" toRoman(8))
+print("9 >" toRoman(9))

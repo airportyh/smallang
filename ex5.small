@@ -1,0 +1,18 @@
+
+fib = (n) =>
+    if(eq(n 1)
+        () => 1
+        () =>
+            if(eq(n 2)
+                () => 1
+                () =>
+                    add(
+                        fib(subtract(n 1))
+                        fib(subtract(n 2))
+                    )
+            )
+        )
+        
+result = fib(7)
+
+print("The answer is" result)
