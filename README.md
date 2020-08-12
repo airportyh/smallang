@@ -72,6 +72,8 @@ print(fib(9))
 * [Episode 6: Parsing Lambda Functions](http://tobyho.com/video/Make-Your-Own-Language-6-Parsing-Lambda-Functions.html) - ([code branch 06-lambda-function](https://github.com/airportyh/smallang/tree/06-lambda-function))
 * [Episode 7: White Space and Ambiguous Grammar](http://tobyho.com/video/Make-Your-Own-Language-7-White-Space-and-Ambiguous-Grammar.html) - ([code branch 07-whitespaces-and-ambiguous-grammars](https://github.com/airportyh/smallang/tree/07-whitespaces-and-ambiguous-grammars))
 * [Episode 8: Generator for Lambda](http://tobyho.com/video/Make-Your-Own-Language-8-Code-Generator-for-Lambda.html) - ([code branch 08-code-gen-lambda](https://github.com/airportyh/smallang/tree/08-code-gen-lambda))
+* [Episode 9: Comments and More Ambiguous grammar](http://tobyho.com/video/Make-Your-Own-Language-9-Comments-and-More-Ambiguous-grammar.html) - ([code branch 09-code-challenge-part-A](https://github.com/airportyh/smallang/tree/09-code-challenge-part-A))
+* [Episode 10: Coding Challenge](http://tobyho.com/video/Make-Your-Own-Language-10-Coding-Challenge.html) - ([code branch 10-code-challenge-part-B](https://github.com/airportyh/smallang/tree/10-code-challenge-part-B))
 
 ## Todo List
 
