@@ -103,6 +103,36 @@ print(fib(9))
     * comments
 * code challenges
 
+## Troubleshooting FAQ
+
+If you are on Windows, you will encounter a lexer error similar to:
+
+```
+name = "Bob"
+                         ^
+Unexpected input (lexer error). Instead, I was expecting to see one of the following:
+
+A NL token based on:
+    statements → statements ● %NL statement
+
+    at Parser.feed (C:\Users\dflyn\thingscript_test\node_modules\nearley\lib\nearley.js:295:27)
+    at main (C:\Users\dflyn\thingscript_test\parse.js:19:8)
+```
+
+The fix is to change the following line in `lexer.js`:
+
+```
+NL:  { match: /[\n]+/, lineBreaks: true }
+```
+
+to
+
+```
+NL:  { match: /[\r\n]+/, lineBreaks: true }
+```
+
+Thank you very much to Derek for finding this fix!
+
 ## My Other Stuff on Programming Languages
 
 * Checkout my full video series on [How to Make a Programming Language](https://www.youtube.com/playlist?list=PLSq9OFrD2Q3DasoOa54Vm9Mr8CATyTbLF)
